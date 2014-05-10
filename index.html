@@ -1,0 +1,34 @@
+<html>
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+    
+    <script type="text/javascript" src="vegas/jquery.vegas.js"> </script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/main.js"> </script>
+
+    <link rel="stylesheet" type="text/css"  href="vegas/jquery.vegas.css" />
+
+    <link rel="stylesheet" type="text/css"  href="css/main.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript">
+		$(function() {
+		$.vegas('slideshow', {
+			  backgrounds:[
+			    { src:'/img/bcg_slide-1.jpg', fade:1000 },
+			    { src:'/img/bcg_slide-2.jpg', fade:1000 }
+			  ]
+			})('overlay', {
+			  src:'vegas/overlays/13.png'
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div style="text-align:center; color: #Fff; margin-top: 200px; text-shadow: 4px 4px #000;">
+	<h1 id="name" style="font-family: 'Lato'; font-size: 80px; font-weight: bold;">JUAN ANDRES RODRIGUEZ</h1>
+<p id="description" style=" font-family: 'Lato'; font-size: 40px;">Web Developer</p>
+</div>
+</body></html>
