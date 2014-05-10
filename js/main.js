@@ -1,11 +1,5 @@
 var $dropDiv = $('#name');
-$( document ).ready( function() {
-    // animate drop
-
-     /*$("#name").show( "drop", 
-                  {direction: "up"}, 3000 );*/
-
-
+$( window ).load( function() {
     $("#name").css({
             top: -200,
             opacity: 0,
@@ -24,6 +18,4 @@ $( document ).ready( function() {
 	            opacity: 1
 	        }, 1500, 'easeOutBounce');
         });
-
-    
 });

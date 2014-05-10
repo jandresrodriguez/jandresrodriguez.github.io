@@ -6,6 +6,8 @@
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script type="text/javascript" src="js/main.js"> </script>
 
+
+
     <link rel="stylesheet" type="text/css"  href="vegas/jquery.vegas.css" />
 
     <link rel="stylesheet" type="text/css"  href="css/main.css" />
@@ -13,22 +15,68 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	
 	<script type="text/javascript">
-		$(function() {
-		$.vegas('slideshow', {
-			  backgrounds:[
-			    { src:'/img/bcg_slide-1.jpg', fade:1000 },
-			    { src:'/img/bcg_slide-2.jpg', fade:1000 }
-			  ]
-			})('overlay', {
-			  src:'vegas/overlays/13.png'
-			});
+		$(window).load(function() {
+			$.vegas('slideshow', {
+				  backgrounds:[
+				    { src:'/img/bcg_slide-1.jpg', fade:1000 },
+				    { src:'/img/bcg_slide-2.jpg', fade:1000 }
+				  ]
+				})('overlay', {
+				  src:'vegas/overlays/13.png'
+				});
 		});
 
 	</script>
 </head>
 <body>
-	<div style="text-align:center; color: #Fff; margin-top: 200px; text-shadow: 4px 4px #000;">
-	<h1 id="name" style="font-family: 'Lato'; font-size: 80px; font-weight: bold;">JUAN ANDRES RODRIGUEZ</h1>
-<p id="description" style=" font-family: 'Lato'; font-size: 40px;">Web Developer</p>
+	<div id="wrapper">
+	<h1 id="name" >JUAN ANDRES RODRIGUEZ</h1>
+	<h2 id="description">WEB DEVELOPER</h2>
 </div>
-</body></html>
+
+<section id="slide-2">
+    <div class="bcg"
+        data-anchor-target="#slide-2"
+    >
+        <div class="hsContainer">
+            <div class="hsContent">
+                <h2 style="color:white;"
+                    data--200-bottom="opacity: 0"
+                    data-center="opacity: 1"
+                    data-206-top="opacity: 1"
+                    data-106-top="opacity: 0"
+                    data-anchor-target="#slide-2 h2"
+                >
+                    Fade me in and out
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="slide-3" class="homeSlide">
+    <div class="bcg"
+        data-center="background-position: 0px 50%;"
+        data-bottom-top="background-position: 0px 40%;"
+        data-top-bottom="background-position: 0px 50%;"
+        data-anchor-target="#slide-3"
+    >
+        <div class="hsContainer">
+            <div class="hsContent">
+                <div class="plaxEl"
+                    data-106-top="opacity: 0"
+                    data-bottom="opacity: 1; position: fixed; top: 206px; width: 100%; left: 0;"
+                    data--30p-top="opacity: 1;"
+                    data--60p-top="opacity: 0;"
+                    data-anchor-target="#slide-3"
+                >
+                    <h2>Fixed element fading in and out</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/skrollr.js"> </script>
+<script type="text/javascript" src="js/_main.js"> </script>
+</body>
+</html>
