@@ -16,6 +16,9 @@ $( window ).load( function() {
 	        }).animate({
 	            top: 120,
 	            opacity: 1
-	        }, 1500, 'easeOutBounce');
+	        }, 1500, 'easeOutBounce',function(){
+
+                $('#icons').fadeIn("slow");
+            });
         });
 });

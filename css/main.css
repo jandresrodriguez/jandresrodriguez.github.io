@@ -82,11 +82,10 @@ body{
 	max-height: 2200px;
 }
 
-#wrapper{
+#wrapper {
 	text-align:center; 
 	color: #Fff; 
 	margin-top: 200px; 
-	text-shadow: 4px 4px #000;
 	height: 900px;
 }
 
@@ -94,14 +93,66 @@ body{
 #name{
 	 display: none;
 	 position: relative;
+	text-shadow: 4px 4px #000;
  	 top: -20px;
  	 font-weight: bold;
 }
 
 #description{
 	 display: none;
+	text-shadow: 4px 4px #000;
 	 position: relative;
  	 top: -20px;
+}
+
+#icons{
+	display:none;
+	margin-top: 250px;
+}
+
+#icons i{
+	color: white;
+	border:1px solid;
+	padding: 30 34;
+	-moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+#icons i:hover{
+	color: black;
+	background-color: white;
+	border-color: white !important;
+	border:1px solid;
+	padding: 30 34;
+	-moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+.fa-twitter:hover{
+	color: #4099FF !important;
+}
+
+.fa-google-plus:hover{
+	color: #C63D2D !important;
+}
+
+.fa-linkedin:hover{
+	color: #4875B4 !important;
+}
+
+.fa-stack-overflow:hover{
+	color: #f68a1f !important;
+}
+
+#wrapper li{
+	display: inline-block;
+
+}
+
+li.menu-item {
+   margin-left: 50px;  
 }
 
 /* CSS */
@@ -112,14 +163,14 @@ body{
     height: 100%;
     overflow: hidden;
     position: relative;
-    opacity: 0;
+    opacity: 1;
 }
 .hsContent {
     max-width: 450px;
     margin: -150px auto 0 auto;
     display: table-cell;
     vertical-align: middle;
-    color: #ebebeb;
+    color: white;
     padding: 0 8%;
     text-align: center
 }
@@ -131,13 +182,11 @@ body{
     height: 100%;
     width: 100%;
 }
-/* Slide 1 */
-#slide-1 .bcg {background-color: #000}
 
 /* CSS - Slide 2 */
 #slide-2 .bcg {
-    background: none;
-    background-color: #010101;
+	color:white;
+    background-color: #d7d7d7;
     height: 310px;
     text-align: center
 }
