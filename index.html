@@ -1,15 +1,53 @@
 <html>
 <head>
+	<meta charset="utf-8">
+	<title>Juan Andres Rodriguez</title>
+	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-    
+    <script src="/js/jqueryknob.js"></script>
     <script type="text/javascript" src="vegas/jquery.vegas.js"> </script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script type="text/javascript" src="js/main.js"> </script>
 
+	<script type="text/javascript">
+		$(function() {
+		    $(".dial").knob({
+		    	readOnly: true,
+		      'draw' : function () { 
+		        $(this.i).val(this.cv + '%')
+		      }
+		    });
+		});
+	</script>
 
+	<script type="text/javascript">
+	var done = false;
+	$(document).ready(function(){
+        $(document).scroll(function() {
+            var top = $(document).scrollTop();
+            
+            if (top > 1200 && !done) {
+            	done =true;
+                $(".dial").val(0).trigger('change');
+			    $(".dial").each(function () {
+				        $(this).animate({
+				            value: $(this).attr("data-val-after")
+				        }, {
+				            duration: 2000,
+				            easing: 'swing',
+				            progress: function () {
+				                $(this).val(Math.round(this.value)).trigger('change');
+				            }
+				        });
+				    });
+            }
+        });
+    });
+	</script>
 
     <link rel="stylesheet" type="text/css"  href="vegas/jquery.vegas.css" />
-
+    <link rel="stylesheet" type="text/css"  href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
+	
     <link rel="stylesheet" type="text/css"  href="css/main.css" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
@@ -19,8 +57,8 @@
 		$(window).load(function() {
 			$.vegas('slideshow', {
 				  backgrounds:[
-				    { src:'/img/bcg_slide-1.jpg', fade:1000 },
-				    { src:'/img/bcg_slide-2.jpg', fade:1000 }
+				    { src:'/img/slide1.jpg', fade:1000 },
+				    { src:'/img/slide2.jpg', fade:1000 }
 				  ]
 				})('overlay', {
 				  src:'vegas/overlays/13.png'
@@ -35,11 +73,11 @@
 	<h2 id="description">WEB DEVELOPER</h2>
 	<div id="icons">
 		<ul>
-			<a href="https://github.com/jandresrodriguez"> <li><i class="fa fa-github fa-2x" ></i></li></a>
-			<a href="https://twitter.com/juan89andres"><li class="menu-item"><i class="fa fa-twitter fa-2x" ></i></li></a>
-			<a href="https://plus.google.com/+JuanAndrésRodríguez1989"><li class="menu-item"><i class="fa fa-google-plus fa-2x" ></i></li></a>
-			<a href="http://stackoverflow.com/users/2245792/juan-andres-rodriguez"><li class="menu-item"><i class="fa fa-stack-overflow fa-2x" ></i></li></a>
-			<a href="http://www.linkedin.com/profile/view?id=145238314"><li class="menu-item"><i class="fa fa-linkedin fa-2x" ></i></li></a>
+			<a href="https://github.com/jandresrodriguez" target="_blank"> <li><i class="fa fa-github fa-2x" ></i></li></a>
+			<a href="https://twitter.com/juan89andres" target="_blank"><li class="menu-item"><i class="fa fa-twitter fa-2x" ></i></li></a>
+			<a href="https://plus.google.com/+JuanAndrésRodríguez1989" target="_blank"><li class="menu-item"><i class="fa fa-google-plus fa-2x" ></i></li></a>
+			<a href="http://stackoverflow.com/users/2245792/juan-andres-rodriguez" target="_blank"><li class="menu-item"><i class="fa fa-stack-overflow fa-2x" ></i></li></a>
+			<a href="http://www.linkedin.com/profile/view?id=145238314" target="_blank"><li class="menu-item"><i class="fa fa-linkedin fa-2x" ></i></li></a>
 		</ul>
 	</div>
 	
@@ -51,15 +89,7 @@
     >
         <div class="hsContainer">
             <div class="hsContent">
-                <h2 
-                    data--200-bottom="opacity: 0"
-                    data-center="opacity: 1"
-                    data-206-top="opacity: 1"
-                    data-106-top="opacity: 0"
-                    data-anchor-target="#slide-2 h2"
-                >
-                    Fade me in and out
-                </h2>
+                    
             </div>
         </div>
     </div>
@@ -74,7 +104,40 @@
     >
         <div class="hsContainer">
             <div class="hsContent">
-                    <h2>Fixed element fading in and out</h2>
+            	<div class="footer">
+                    <h2 id="talk">LET'S TALK !</h2>
+                    <br/><br/>
+					<div class="footer-contactdata">
+                    <p><i class="fa fa-envelope-o"></i>&nbsp;&nbsp; jandres.rodriguezg@gmail.com <br/></p>
+                    <p><i class="fa fa-phone"></i>&nbsp;&nbsp; (+598) 95 608 126 <br/></p>
+                    <p><i class="fa fa-map-marker"></i> &nbsp;&nbsp; Carrasco, Montevideo, UY</p>
+                    </div>
+                    <div class="fr contact">
+                    <form class="form-horizontal" role="form">
+                    	<div class="form-group">
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputName" placeholder="Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-10">
+      ​<textarea id="inputMessage" class="form-control" rows="10" placeholder="Message"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class=" col-sm-10">
+      <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+    </div>
+  </div>
+</form>
+</div>
+<div class="clear"></div>
+</div>
                 </div>
             </div>
         </div>

@@ -21,4 +21,14 @@ $( window ).load( function() {
                 $('#icons').fadeIn("slow");
             });
         });
+
+    $('.col-md-2 img').mouseover(function (){
+        $(this).removeClass('desaturate');
+
+    });
+
+    $('.col-md-2 img').mouseout(function (){
+        $(this).addClass('desaturate');
+
+    });
 });

@@ -47,9 +47,33 @@ and (min-width : 1224px) {
  	 font-size: 50px; 
 	}
 
-	#description{
+	#description {
 	 	 font-size: 30px;
 	}
+
+	#talk{
+		font-size: 35px;
+	}
+
+	#icons i{
+	color: white;
+	border:1px solid;
+	padding: 15 19;
+	-moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+#icons i:hover{
+	color: black;
+	background-color: white;
+	border-color: white !important;
+	border:1px solid;
+	padding: 15 19;
+	-moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
 }
 
 /* Large screens ----------- */
@@ -62,6 +86,30 @@ and (min-width : 1824px) {
 	#description{
 	 	 font-size: 40px;
 	}
+
+	#talk{
+		font-size: 45px;
+	}
+
+	#icons i{
+	color: white;
+	border:1px solid;
+	padding: 30 34;
+	-moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+#icons i:hover{
+	color: black;
+	background-color: white;
+	border-color: white !important;
+	border:1px solid;
+	padding: 30 34;
+	-moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
 }
 
 /* iPhone 4 ----------- */
@@ -76,6 +124,8 @@ html,body{
 	margin: 0px;
 	 padding: 0px;
 	 border: 0px;
+
+	
 }
 
 body{
@@ -110,25 +160,7 @@ body{
 	margin-top: 250px;
 }
 
-#icons i{
-	color: white;
-	border:1px solid;
-	padding: 30 34;
-	-moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
-    border-radius: 50%;
-}
 
-#icons i:hover{
-	color: black;
-	background-color: white;
-	border-color: white !important;
-	border:1px solid;
-	padding: 30 34;
-	-moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
-    border-radius: 50%;
-}
 
 .fa-twitter:hover{
 	color: #4099FF !important;
@@ -146,13 +178,30 @@ body{
 	color: #f68a1f !important;
 }
 
-#wrapper li{
+#wrapper li, #tec li{
 	display: inline-block;
 
 }
 
 li.menu-item {
    margin-left: 50px;  
+}
+
+#tec ul{
+	padding-top: 200px;
+	padding-left: 200px;
+}
+
+.col-md-2 img{
+	-webkit-transition: all .6s ease;
+
+}
+
+.desaturate { 
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: all .6s ease;
 }
 
 /* CSS */
@@ -186,14 +235,61 @@ li.menu-item {
 /* CSS - Slide 2 */
 #slide-2 .bcg {
 	color:white;
-    background-color: #d7d7d7;
-    height: 310px;
+    background-image:url('../img/Apple-BG.jpg');
+    height: 1600px;
     text-align: center
 }
 
 /* CSS - Slide 3 */
 #slide-3 .bcg {
-	background-image:url('../img/bcg_slide-3.jpg');
-	height:1000px;
+	background-color: black;
+	height:550px;
 
+}
+
+#container {
+	display: table;
+	}
+
+#row  {
+	display: table-row;
+	}
+
+#left, #right, #middle {
+	display: table-cell;
+	}
+
+.row1{
+	padding-bottom: -20px;
+}
+
+.footer{
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.footer-contactdata{
+	text-align: left;
+	float: left;
+}
+
+.fr{
+	float:right;
+}
+
+.clear{
+	clear:both;
+}
+
+.contact{
+	width: 400px;
+}
+
+.footer-contactdata p{
+	margin: 7 0;
+}
+
+#talk{
+	text-shadow: 2px 2px #666;
 }
