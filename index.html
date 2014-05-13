@@ -26,7 +26,7 @@
         $(document).scroll(function() {
             var top = $(document).scrollTop();
             
-            if (top > 1200 && !done) {
+            if (top > 1000 && !done) {
             	done =true;
                 $(".dial").val(0).trigger('change');
 			    $(".dial").each(function () {
@@ -41,6 +41,13 @@
 				        });
 				    });
             }
+
+            if (top >= 1100 ) {
+                $("#navigation").addClass('navigation-fixed');
+            }
+            else{
+            	$("#navigation").removeClass('navigation-fixed');
+            }
         });
     });
 	</script>
@@ -50,6 +57,7 @@
 	
     <link rel="stylesheet" type="text/css"  href="css/main.css" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css'>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	
@@ -68,6 +76,7 @@
 	</script>
 </head>
 <body>
+	
 	<div id="wrapper">
 	<h1 id="name" >JUAN ANDRES RODRIGUEZ</h1>
 	<h2 id="description">WEB DEVELOPER</h2>
@@ -87,9 +96,156 @@
     <div class="bcg"
         data-anchor-target="#slide-2"
     >
+    <div id="navigation">
+		<ul>
+			<li>TOP</li>
+			<li>ABOUT</li>
+			<li>SKILLS</li>
+			<li>EDUCATION</li>
+			<li>CONTACT</li>
+		</ul>
+
+	</div>
         <div class="hsContainer">
             <div class="hsContent">
-                    
+
+                    <div id="tec">
+                    	<h2 class="title">SKILLS</h2>
+						<!-- <ul>
+							
+							<li></li>
+							<li class="menu-item"><img class="desaturate" src="img/angularjs.png" alt="AngularJS" height="50" width="50"  ></li>
+							<li class="menu-item"><img class="desaturate" src="img/JavaScript.png" alt="JavaScript" height="50"  ></li>
+							<li class="menu-item"><img class="desaturate" src="img/jquery.png" alt="jQuery" height="50" ></li><br/>
+							<li class="menu-item"><img class="desaturate" src="img/html5.png" alt="HTML5" height="50" ></li>
+							<li class="menu-item"><img class="desaturate" src="img/css3.png" alt="CSS3" height="50" ></li>
+							<li class="menu-item"><img class="desaturate" src="img/git.png" alt="GIT" height="50" ></li>
+							<li class="menu-item"><img class="desaturate" src="img/ios.png" alt="ios" height="50" ></li>
+							<li class="menu-item"><img class="desaturate" src="img/ps.jpg" alt="ios" height="50" ></li>
+						</ul> -->
+						
+					</div>
+					<div class="container">
+					<div class="row row1">
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness=".03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="80">
+										</div>
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness=".03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="75">
+										</div>
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness=".03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="75">
+										</div>
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness="0.03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="90">
+										</div>
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness="0.03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="85">
+										</div>
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness="0.03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="85">
+										</div>																			
+					</div>
+					<div class="row ">
+					  <div class="col-md-2"><h3 class="subtitle">Ruby On Rails</h3></div>
+					  <div class="col-md-2"><h3 class="subtitle">Angular.js</h3></div>
+					  <div class="col-md-2"><h3 class="subtitle">JavaScript</h3></div>
+					  <div class="col-md-2"><h3 class="subtitle">HTML</h3></div>
+					  <div class="col-md-2"><h3 class="subtitle">CSS</h3></div>
+					  <div class="col-md-2"><h3 class="subtitle">jQuery</h3></div>
+					</div>	
+	
+					<div class="row row1">
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness=".03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="80">
+										</div>
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness=".03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="80">
+										</div>
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness=".03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="75">
+										</div>
+					  <div class="col-md-2"><input type="text" class="dial" 
+											data-width="150"
+											data-height="170"
+											data-fgColor="rgba(0,0,0,0.8)"
+											data-skin="tron"
+											data-thickness="0.03"
+											data-angleOffset="90"
+											value="0" 
+											data-val-after="70">
+										</div>																			
+					</div>
+					<div class="row ">					  
+					  <div class="col-md-2"><h3 class="subtitle">git</h3></div>
+					  <div class="col-md-2"><h3 class="subtitle">.net</h3></div>
+					  <div class="col-md-2"><h3 class="subtitle">JavaEE</h3></div>
+					  <div class="col-md-2"><h3 class="subtitle">Photoshop</h3></div>
+					</div>	
+					</div>				
             </div>
         </div>
     </div>
