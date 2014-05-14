@@ -1,6 +1,6 @@
 var $dropDiv = $('#name');
 $( window ).load( function() {
-    $("#name").css({
+    /*$("#name").css({
             top: -200,
             opacity: 0,
             display: 'block'
@@ -20,7 +20,13 @@ $( window ).load( function() {
 
                 $('#icons').fadeIn("slow");
             });
-        });
+        });*/
+
+    $("#name").addClass('animated fadeInDown');
+    $("#description").addClass('animated fadeInDown');
+    $("#icons").addClass('animated fadeInUp');
+    
+
 
     $('.col-md-2 img').mouseover(function (){
         $(this).removeClass('desaturate');
