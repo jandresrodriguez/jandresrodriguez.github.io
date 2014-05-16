@@ -25,7 +25,7 @@ $( window ).load( function() {
     $("#name").addClass('animated fadeInDown');
     $("#description").addClass('animated fadeInDown');
     $("#icons").addClass('animated fadeInUp');
-    
+
 
 
     $('.col-md-2 img').mouseover(function (){
@@ -36,5 +36,13 @@ $( window ).load( function() {
     $('.col-md-2 img').mouseout(function (){
         $(this).addClass('desaturate');
 
+    });
+    function scrollToAnchor(aid){
+        var aTag = $("a[name='"+ aid +"']");
+        $('html,body').animate({scrollTop: aTag.offset().top},2000);
+    }
+
+    $("#link").click(function() {
+       scrollToAnchor('contact');
     });
 });

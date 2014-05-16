@@ -75,6 +75,8 @@ and (min-width : 1224px) {
     border-radius: 50%;
 
 }
+
+
 }
 
 /* Large screens ----------- */
@@ -111,6 +113,8 @@ and (min-width : 1824px) {
     -webkit-border-radius: 50%; 
     border-radius: 50%;
 }
+
+
 }
 
 /* iPhone 4 ----------- */
@@ -339,15 +343,19 @@ li.menu-item {
 
 #navigation ul{
 	height:100%;
-	
+}
 
-
+#navigation a{
+	color: rgba(200,200,200,0.8);
+	padding: 20 40 20 40;
+	position: relative;
+	top: 17px;
 }
 
 #navigation li{
 	height:100%;
 	display: inline-block;
-	padding: 20 40 20 40;
+	
 	border-color: transparent transparent transparent transparent;
 	border-style: solid;
 	border-width: 6px;
@@ -358,7 +366,13 @@ li.menu-item {
 	border-color: #ffffff transparent transparent transparent;
 	border-style: solid;
 	border-width: 6px;
+	color: rgba(255,255,255,0.8) !important;
+	text-decoration: none;
+}
 
+#navigation li a:hover{
+	color: rgba(255,255,255,0.8);
+	text-decoration: none;
 }
 
 
