@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Juan Andres Rodriguez</title>
-	
+	<link href="/img/jandres.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
     <script src="/js/jqueryknob.js"></script>
     <script type="text/javascript" src="vegas/jquery.vegas.js"> </script>
@@ -10,7 +10,7 @@
     <script type="text/javascript" src="js/main.js"> </script>
 
 	<script type="text/javascript">
-		$(function() {
+		$(window).load(function() {
 		    $(".dial").knob({
 		    	readOnly: true,
 		      'draw' : function () { 
@@ -22,7 +22,7 @@
 
 	<script type="text/javascript">
 	var done = false;
-	$(document).ready(function(){
+	$(window).load(function(){
         $(document).scroll(function() {
             var top = $(document).scrollTop();
             if(top>300){
@@ -95,10 +95,10 @@
 	<div id="wrapper">
 	<div id="floater"></div>
 	<div id="centered">
-		<h1 id="name" >JUAN ANDRES RODRIGUEZ</h1>
-		<h2 id="description">SOFTWARE ENGINEER</h2>
+		<h1 id="name" class="opacity-zero" >JUAN ANDRES RODRIGUEZ</h1>
+		<h2 id="description" class="opacity-zero">SOFTWARE ENGINEER</h2>
 
-	<div id="icons">
+	<div id="icons" class="opacity-zero">
 		<ul>
 			<a href="https://github.com/jandresrodriguez" target="_blank"> <li><i class="fa fa-github fa-2x" ></i></li></a>
 			<a href="https://twitter.com/juan89andres" target="_blank"><li class="menu-item"><i class="fa fa-twitter fa-2x" ></i></li></a>
