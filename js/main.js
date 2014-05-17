@@ -45,4 +45,31 @@ $( window ).load( function() {
     $("#link").click(function() {
        scrollToAnchor('contact');
     });
+
+    $('#submit-button').click(function() {
+        $.ajax({
+          type: 'POST',
+          url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+          data: {
+            'key': 'T7kt8SBtFLpaOOKZxBSO8A',
+            'message': {
+              'from_email': 'enanosanlo@gmail.com',
+              'to': [
+                  {
+                    'email': 'jandres.rodriguezg@gmail.com',
+                    'name': 'Juan Andres Rodriguez',
+                    'type': 'to'
+                  }
+                ],
+              'autotext': 'true',
+              'subject': 'Web Personal',
+              'html': '<strong>' + document.getElementById('inputName').value + '<br/><br/>' +
+              document.getElementById('inputEmail').value + '</strong><br/><br/>' +
+              document.getElementById('inputMessage').value
+            }
+          }
+         }).done(function(response) {
+           console.log(response); // if you're into that sorta thing
+         });
+    });
 });
