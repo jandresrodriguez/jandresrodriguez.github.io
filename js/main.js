@@ -25,6 +25,15 @@ $( window ).load( function() {
     $("#name").addClass('animated fadeInDown');
     $("#description").addClass('animated fadeInDown');
     $("#icons").addClass('animated fadeInUp');
+    $('.arrow i').mouseover(function (){
+        $('#message-scroll').removeClass('animated fadeOutDown');
+        $('#message-scroll').addClass('animated fadeInUp');
+
+    });
+    $('.arrow i').mouseout(function (){
+        $('#message-scroll').removeClass('animated fadeInUp');
+        $('#message-scroll').addClass('animated fadeOutDown');
+    });    
 
 
 
