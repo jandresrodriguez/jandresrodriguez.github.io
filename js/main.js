@@ -24,14 +24,32 @@ $( window ).load( function() {
         $(this).addClass('desaturate');
 
     });
-    function scrollToAnchor(aid){
+    /*function scrollToAnchor(aid){
         var aTag = $("a[name='"+ aid +"']");
         $('html,body').animate({scrollTop: aTag.offset().top},2000);
-    }
+    }*/
 
-    $("#link").click(function() {
-       scrollToAnchor('contact');
+    $('#top').click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
     });
+
+    $('#link-contact').click(function () {
+      $('body,html').animate({
+        scrollTop: 1745
+      }, 800);
+      return false;
+    });
+
+    $('#link-skills').click(function () {
+      $('body,html').animate({
+        scrollTop: 1000
+      }, 800);
+      return false;
+    });
+
 });
 
 jQuery(function($)  
@@ -95,7 +113,7 @@ var done = false;
             if (top >= 900 && !done) {
               done =true;
               
-                $(".dial").val(0).trigger('change');
+          $(".dial").val(0).trigger('change');
           $(".dial").each(function () {
                 $(this).animate({
                     value: $(this).attr("data-val-after")
