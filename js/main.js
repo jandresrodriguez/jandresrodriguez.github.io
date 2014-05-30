@@ -82,3 +82,68 @@ $( window ).load( function() {
          });
     });
 });
+
+var done = false;
+  $(window).load(function(){
+        $(document).scroll(function() {
+            var top = $(document).scrollTop();
+            if(top>300){
+              $("#skills").addClass('animated fadeInDown');
+            }
+            if (top>400){
+              $('#knobs1').addClass('animated fadeInLeft');
+              $('#knobs2').addClass('animated fadeInRight');
+            }
+            if (top>450){
+              $('#knobs3').addClass('animated fadeInLeft');
+              $('#knobs4').addClass('animated fadeInRight');
+            }
+            if (top >= 900 && !done) {
+              done =true;
+              
+                $(".dial").val(0).trigger('change');
+          $(".dial").each(function () {
+                $(this).animate({
+                    value: $(this).attr("data-val-after")
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    progress: function () {
+                        $(this).val(Math.round(this.value)).trigger('change');
+                    }
+                });
+            });
+            }
+
+            if (top >= 1000 ) {
+                $("#navigation").addClass('navigation-fixed');
+                $("#navigation").addClass('animated pulse');
+                $()
+            }
+            else{
+              $("#navigation").removeClass('navigation-fixed');
+              $("#navigation").removeClass('animated pulse');
+            }
+        });
+    });
+
+$(window).load(function() {
+        $(".dial").knob({
+          readOnly: true,
+          'draw' : function () { 
+            $(this.i).val(this.cv + '%')
+          }
+        });
+    });
+
+$(window).load(function() {
+      $.vegas('slideshow', {
+          backgrounds:[
+            { src:'/img/slide1.jpg', fade:1000 },
+            { src:'/img/slide2.jpg', fade:1000 }
+          ]
+        })('overlay', {
+          src:'vegas/overlays/13.png'
+        });
+    });
+

@@ -3,64 +3,6 @@
 	<meta charset="utf-8">
 	<title>Juan Andres Rodriguez</title>
 	<link href="/img/jandres.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	
-
-	<script type="text/javascript">
-		$(window).load(function() {
-		    $(".dial").knob({
-		    	readOnly: true,
-		      'draw' : function () { 
-		        $(this.i).val(this.cv + '%')
-		      }
-		    });
-		});
-	</script>
-
-	<script type="text/javascript">
-	var done = false;
-	$(window).load(function(){
-        $(document).scroll(function() {
-            var top = $(document).scrollTop();
-            if(top>300){
-            	$("#skills").addClass('animated fadeInDown');
-            }
-            if (top>400){
-            	$('#knobs1').addClass('animated fadeInLeft');
-            	$('#knobs2').addClass('animated fadeInRight');
-            }
-            if (top>450){
-            	$('#knobs3').addClass('animated fadeInLeft');
-            	$('#knobs4').addClass('animated fadeInRight');
-            }
-            if (top >= 900 && !done) {
-            	done =true;
-            	
-                $(".dial").val(0).trigger('change');
-			    $(".dial").each(function () {
-				        $(this).animate({
-				            value: $(this).attr("data-val-after")
-				        }, {
-				            duration: 2000,
-				            easing: 'swing',
-				            progress: function () {
-				                $(this).val(Math.round(this.value)).trigger('change');
-				            }
-				        });
-				    });
-            }
-
-            if (top >= 1000 ) {
-                $("#navigation").addClass('navigation-fixed');
-                $("#navigation").addClass('animated pulse');
-                $()
-            }
-            else{
-            	$("#navigation").removeClass('navigation-fixed');
-            	$("#navigation").removeClass('animated pulse');
-            }
-        });
-    });
-	</script>
 
     <link rel="stylesheet" type="text/css"  href="vegas/jquery.vegas.css" />
     <link rel="stylesheet" type="text/css"  href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
@@ -72,19 +14,6 @@
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	
-	<script type="text/javascript">
-		$(window).load(function() {
-			$.vegas('slideshow', {
-				  backgrounds:[
-				    { src:'/img/slide1.jpg', fade:1000 },
-				    { src:'/img/slide2.jpg', fade:1000 }
-				  ]
-				})('overlay', {
-				  src:'vegas/overlays/13.png'
-				});
-		});
-
-	</script>
 </head>
 <body>
 	
