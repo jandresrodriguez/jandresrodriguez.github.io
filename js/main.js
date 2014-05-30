@@ -54,7 +54,7 @@ jQuery(function($)
                         'Reply-To': email
                     },
                     'subject': 'Personal Website Message',
-                    'text': msg,
+                    'html': '<strong>' + name + '<br/><br/>' +email + '</strong><br/><br/>' + msg,
                     'to': [
                     {
                         'email': 'jandres.rodriguezg@gmail.com',
