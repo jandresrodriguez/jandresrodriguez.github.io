@@ -1,27 +1,5 @@
 var $dropDiv = $('#name');
 $( window ).load( function() {
-    /*$("#name").css({
-            top: -200,
-            opacity: 0,
-            display: 'block'
-        }).animate({
-            top: 100,
-            opacity: 1
-        }, 1500, 'easeOutBounce',function(){
-
-        	$("#description").css({
-	            top: -200,
-	            opacity: 0,
-	            display: 'block'
-	        }).animate({
-	            top: 120,
-	            opacity: 1
-	        }, 1500, 'easeOutBounce',function(){
-
-                $('#icons').fadeIn("slow");
-            });
-        });*/
-
     $("#name").addClass('animated fadeInDown');
     $("#description").addClass('animated fadeInDown');
     $("#icons").addClass('animated fadeInUp');
@@ -54,32 +32,48 @@ $( window ).load( function() {
     $("#link").click(function() {
        scrollToAnchor('contact');
     });
+});
 
-    $('#submit-button').click(function() {
-        $.ajax({
-          type: 'POST',
-          url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-          data: {
-            'key': 'T7kt8SBtFLpaOOKZxBSO8A',
-            'message': {
-              'from_email': 'enanosanlo@gmail.com',
-              'to': [
-                  {
-                    'email': 'jandres.rodriguezg@gmail.com',
-                    'name': 'Juan Andres Rodriguez',
-                    'type': 'to'
-                  }
-                ],
-              'autotext': 'true',
-              'subject': 'Web Personal',
-              'html': '<strong>' + document.getElementById('inputName').value + '<br/><br/>' +
-              document.getElementById('inputEmail').value + '</strong><br/><br/>' +
-              document.getElementById('inputMessage').value
+jQuery(function($)  
+{
+    $("#contact_form").submit(function()
+    {
+        var email = $("#email").val(); // get email field value
+        var name = $("#input-name").val(); // get name field value
+        var msg = $("#msg").val(); // get message field value
+        $.ajax(
+        {
+            type: "POST",
+            url: "https://mandrillapp.com/api/1.0/messages/send.json",
+            data: {
+                'key': 'T7kt8SBtFLpaOOKZxBSO8A',
+                'message': {
+                    'from_email': email,
+                    'from_name': name,
+                    'headers': {
+                        'Reply-To': email
+                    },
+                    'subject': 'Personal Website Message',
+                    'text': msg,
+                    'to': [
+                    {
+                        'email': 'jandres.rodriguezg@gmail.com',
+                        'name': 'Juan Andres Rodriguez',
+                        'type': 'to'
+                    }]
+                }
             }
-          }
-         }).done(function(response) {
-           console.log(response); // if you're into that sorta thing
-         });
+        })
+        .done(function(response) {
+            alert('Your message has been sent. Thank you!'); // show success message
+            $("#input-name").val(''); // reset field after successful submission
+            $("#email").val(''); // reset field after successful submission
+            $("#msg").val(''); // reset field after successful submission
+        })
+        .fail(function(response) {
+            alert('Error sending message.');
+        });
+        return false; // prevent page refresh
     });
 });
 
@@ -146,4 +140,6 @@ $(window).load(function() {
           src:'vegas/overlays/13.png'
         });
     });
+
+
 
