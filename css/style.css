@@ -7,11 +7,11 @@ html,body{
   color: #fff;
 }
 
-html{
+html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-canvas{
+canvas {
   display:block;
   vertical-align:bottom;
 }
@@ -23,19 +23,11 @@ canvas{
 }
 
 .socials {
-  position: absolute;
   margin-top: 30px;
-  top: 53%;
-  width: 20%;
-  left: 40%;
 }
 
 .socials a {
   color: #fff;
-}
-
-.socials i {
-  font-size: 20px;
 }
 
 .socials i:hover {
@@ -43,9 +35,7 @@ canvas{
 }
 
 .mail {
-  position: absolute;
-  top: 57%;
-  width: 100%;
+  margin-top: 20px;
   user-select: none;
 }
 
@@ -64,30 +54,66 @@ h1 {
 }
 
 /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 0px) {
+  h1.juan-title {
+    font-size: 50px;
+    line-height: 50px;
+    min-height: 50px;
+  }
+
+  .socials i {
+    font-size: 15px;
+  }
+}
+
 @media (min-width: 576px) {
-  h1 {
-    font-size: 30px;
+  h1.juan-title {
+    font-size: 50px;
+    line-height: 50px;
+    min-height: 50px;
+  }
+
+  .socials i {
+    font-size: 15px;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  h1 {
+  h1.juan-title {
     font-size: 50px;
+    line-height: 50px;
+    min-height: 50px;
+  }
+
+  .socials i {
+    font-size: 15px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  h1 {
+  h1.juan-title {
     font-size: 80px;
+    line-height: 80px;
+    min-height: 80px;
+  }
+
+  .socials i {
+    font-size: 20px;
   }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  h1 {
+  h1.juan-title {
     font-size: 100px;
+    line-height: 100px;
+    min-height: 100px;
+  }
+
+  .socials i {
+    font-size: 20px;
   }
 }
 
